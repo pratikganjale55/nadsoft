@@ -35,11 +35,17 @@ npm install
 ```
 
 ### 3. Setup PostgreSQL Database
-- Create a database `students_db`
-- Update `backend/config.js` with your PostgreSQL credentials
-- Run migrations:
+- Create a database 
+- below is credentials for database connections
+- add yours credentials
   ```sh
-  npm run migrate
+ const pool = new Pool({
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_NAME,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
+});
   ```
 
 ### 4. Run the project
